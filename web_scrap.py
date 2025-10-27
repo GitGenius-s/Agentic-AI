@@ -28,3 +28,15 @@ class Website:
 # sel = Website("https://edwarddonner.com")
 # print(sel.title)
 # print(sel.text)
+
+"""
+open source model
+1.Llama from meta
+2.Mistral from mistral
+3.Qwen from alibaba cloud
+4.Gemma from google
+5.phi from microsoft
+6.Deepseek from DeepSeek Ai
+7.GPT-OSS from openai
+Inferance (Running the model)
+"""
