@@ -25,6 +25,17 @@ class Website:
         self.content_preview = (self.title + "\n\n" + self.text)[:2000]
         # return (self.title + "\n\n" + self.text)[:2000]
 
+    def fetch_website_link(self,url):
+        """
+        Fetch all the links from the given website url
+        """
+        response = requests.get(url)
+        soup = BeautifulSoup(response.content, 'html.parser')
+        links = []
+        for a_tag in soup.find_all('a', href=True):
+            links.append(a_tag['href'])
+        return links
+
 # sel = Website("https://edwarddonner.com")
 # print(sel.title)
 # print(sel.text)
